@@ -1,14 +1,15 @@
+from dotenv import load_dotenv
 import os
 
 from autogen import AssistantAgent, UserProxyAgent
 
-
+# llm config
 llm_config = {
     "config_list": [
         {
             "model": "gpt-4-1106-preview",
             "api_key": os.environ.get(
-                "OPENAI_SECERET", "sk-123131****"
+                "OPENAI_SECRET", "sk-123131****"
             ),
         }
     ]
